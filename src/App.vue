@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <Header />
+    <div style="margin-top: 75px"></div>
+    <Navigator />
+
+    <!-- <router-link to="/">Home</router-link>
+    <router-link to="/Korpadalen">Korpadalen</router-link> -->
+
+    <router-view />
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Header from "./components/Header";
+import Navigator from "./components/Navigator";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: "App",
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    Header,
+    Navigator,
+  },
+
+  watch: {
+    $route: {
+      handler: (to) => {
+        document.title = `Lekelunds ${
+          to.meta.title ? " - " + to.meta.title : ""
+        }`;
+      },
+    },
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
