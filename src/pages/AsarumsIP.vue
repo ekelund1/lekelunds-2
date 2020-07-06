@@ -25,7 +25,7 @@
               <v-col class="pa-5  align-center text-center">
                 <v-row class="pa-5">
                   <v-img
-                    src="https://projects-static.raspberrypi.org/projects/compass-maze/ec778048c89981892ccbef0614715366fa4894fc/en/images/compass-maze.png"
+                    src="../assets/sodra.png"
                     contain
                     height="300px"
                 /></v-row>
@@ -44,6 +44,7 @@
                     height="300px"
                     cover
                     src="https://www.google.com/maps/vt/data=HZGkY1E4SGawmHXQk9Znnwp2VZM4gbHbpS7wMFEnW76gfb6Kd8zg6QyhyIhxi6Yk8Tc-zRIxFu1KBHquv_jYnBW_LWtUWQSuwHT2DsX_7yOzylNmXtRWW-4EZ46E0G964RZlhUJmXhOcs3L0l3RJKahzrHiiO71Ixc2P5Yuz9SJXlNM8qJJbTJYLG6vN9TLEG_H_Epxzh4fEYKkF4tsD1jav7Kqt7UqiDaxcnuXdbBLYZ6A"
+                    stlye="transform"
                   /> </v-row></v-col
             ></v-card-text>
           </v-card>
