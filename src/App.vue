@@ -1,20 +1,23 @@
 <template>
   <v-app>
     <Header />
-    <div style="margin-top: 75px"></div>
+    <div style="margin-top: 150px"></div>
+    <div style="position: absolute; top: 60px; right: 0px">
+      <SillyImage />
+    </div>
     <router-view />
   </v-app>
 </template>
 
 <script>
 import Header from "./components/Header";
-import Navigator from "./components/Navigator";
+import SillyImage from "./components/SillyImage";
 export default {
   name: "App",
 
   components: {
     Header,
-    Navigator,
+    SillyImage,
   },
 
   watch: {
@@ -26,9 +29,5 @@ export default {
       },
     },
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>

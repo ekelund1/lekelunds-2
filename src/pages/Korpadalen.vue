@@ -26,7 +26,6 @@
               </v-col>
             </v-row></v-card-text
           >
-
           <v-row class="ma-6">
             <v-text-field
               outlined
@@ -79,7 +78,6 @@
 <script>
 export default {
   name: "Korpadalen",
-  components: {},
   methods: {
     numbersChanged() {
       this.useDefault = false;
