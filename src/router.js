@@ -20,7 +20,7 @@ const router = new VueRouter({
       },
     },
     {
-      path: "/Notavalla",
+      path: "/plats2",
       name: "Notavalla",
       component: Notavalla,
       meta: {
@@ -28,27 +28,27 @@ const router = new VueRouter({
       },
     },
     {
-      path: "/Ringvägen",
+      path: "/plats3",
       name: "Ringvägen",
       component: Ringvägen,
       meta: {
-        title: "Gräsplanen",
+        title: "Plats 3",
       },
     },
     {
-      path: "/AsarumsIP",
+      path: "/plats4",
       name: "AsarumsIP",
       component: AsarumsIP,
       meta: {
-        title: "Asarums IP",
+        title: "Plats 4",
       },
     },
     {
-      path: "/SödraLångasjön",
+      path: "/plats5",
       name: "SödraLångasjön",
       component: SödraLångasjön,
       meta: {
-        title: "Långasjön - Södra änden",
+        title: "Plats 5",
       },
     },
   ],

@@ -51,7 +51,6 @@
       <v-row v-if="correctPlace">
         <v-col
           ><v-alert type="success"> Korrekt plats! </v-alert>
-
           <v-btn
             style="margin-top: 50px"
             x-large
@@ -60,7 +59,7 @@
             block
             class="text-center"
             elevation="5"
-            to="/AsarumsIP"
+            to="/plats4"
             >Nästa</v-btn
           ></v-col
         >
@@ -120,14 +119,7 @@ export default {
   computed: {
     shuffledArray: () => {
       const array = "ASARUMSIP".split("");
-
-      for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-      }
-      return array;
+      return array.sort().reverse();
     },
   },
 };

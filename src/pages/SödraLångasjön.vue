@@ -41,7 +41,7 @@ export default {
   name: "SödraLångasjön",
   methods: {
     handleChange(text) {
-      if (text.toLowerCase() === "a") {
+      if (text.toLowerCase() === "högtalare") {
         this.success = true;
         this.invalidText = false;
         this.errorText = "";
@@ -56,7 +56,6 @@ export default {
     },
   },
   components: {},
-
   data: () => ({
     inputText: "",
     success: false,

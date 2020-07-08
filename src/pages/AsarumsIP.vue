@@ -19,22 +19,15 @@
           </v-col>
         </v-row>
         <transition name="fade">
-          <v-card v-if="!success" class="align-center">
+          <v-card v-if="success" class="align-center">
             <v-card-title class="align-center">Vart ska vi?</v-card-title>
             <v-card-text class="align-center">
               <v-col class="pa-5  align-center text-center">
                 <v-row class="pa-5">
-                  <v-img
-                    src="../assets/sodra.png"
-                    contain
-                    height="300px"
+                  <v-img src="../assets/sodra.png" contain height="300px"
                 /></v-row>
                 <v-row class="pa-5">
-                  <v-img
-                    height="300px"
-                    cover
-                    src="../assets/lango.png"
-                  />
+                  <v-img height="300px" cover src="../assets/lango.png" />
                 </v-row>
                 <v-row class="pa-5">
                   <h2 class="text-center flex">- Ö + A</h2></v-row
@@ -47,6 +40,17 @@
                     stlye="transform"
                   /> </v-row></v-col
             ></v-card-text>
+            <v-btn
+              style="margin-top: 50px"
+              x-large
+              color="primary"
+              rounded
+              block
+              class="text-center"
+              elevation="5"
+              to="/plats5"
+              >Nästa</v-btn
+            >
           </v-card>
         </transition>
       </v-col>
@@ -59,7 +63,7 @@ export default {
   name: "AsarumsIP",
   methods: {
     handleChange(text) {
-      if (text.toLowerCase() === "a") {
+      if (text.toLowerCase() === "vattenflaska") {
         this.success = true;
         this.invalidText = false;
         this.errorText = "";

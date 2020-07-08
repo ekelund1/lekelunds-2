@@ -33,22 +33,27 @@
               label="X"
               v-model="posX"
               type="number"
+              @change="numbersChanged"
             ></v-text-field>
             <v-text-field
               outlined
               label="Y"
               v-model="posY"
               type="number"
+              @change="numbersChanged"
             ></v-text-field
           ></v-row>
 
+          <h2>Korpadalens lekplats: 56.2058, 14.852</h2>
           <iframe
             width="100%"
             height="450"
             frameborder="0"
             style="border:0"
             :src="
-              `https://www.google.com/maps/embed/v1/view?key=AIzaSyC6Pc2048HP7n4I_4jzGEdd5xKcUFgp_-M&center=${posX},${posY}&zoom=18&maptype=satellite`
+              `https://www.google.com/maps/embed/v1/view?key=AIzaSyC6Pc2048HP7n4I_4jzGEdd5xKcUFgp_-M&center=${
+                useDefault ? `${defaultX},${defaultY}` : `${posX},${posY}`
+              }&zoom=18&maptype=satellite`
             "
             allowfullscreen
           >
@@ -65,7 +70,7 @@
       block
       class="text-center"
       elevation="5"
-      to="/Notavalla"
+      to="/plats2"
       >Nästa</v-btn
     >
   </v-container>
@@ -75,10 +80,17 @@
 export default {
   name: "Korpadalen",
   components: {},
-  methods: {},
+  methods: {
+    numbersChanged() {
+      this.useDefault = false;
+    },
+  },
   data: () => ({
-    posX: 56.2058,
-    posY: 14.852,
+    useDefault: true,
+    posX: 0,
+    posY: 0,
+    defaultX: 56.2058,
+    defaultY: 14.852,
   }),
 };
 </script>
