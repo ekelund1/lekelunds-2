@@ -2,11 +2,6 @@
   <v-app>
     <Header />
     <div style="margin-top: 75px"></div>
-    <Navigator />
-
-    <!-- <router-link to="/">Home</router-link>
-    <router-link to="/Korpadalen">Korpadalen</router-link> -->
-
     <router-view />
   </v-app>
 </template>
