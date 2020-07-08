@@ -42,8 +42,16 @@
               @change="numbersChanged"
             ></v-text-field
           ></v-row>
-
-          <h2>Korpadalens lekplats: 56.2058, 14.852</h2>
+          <v-btn
+            style="margin-top: 50px "
+            x-large
+            color="accent"
+            rounded
+            class="text-center ma-5 d-flex"
+            elevation="5"
+            @click="reset"
+            >Återställ</v-btn
+          >
           <iframe
             width="100%"
             height="450"
@@ -80,7 +88,12 @@ export default {
   name: "Korpadalen",
   methods: {
     numbersChanged() {
-      this.useDefault = false;
+      if (this.posX !== 0 && this.posY !== 0) this.useDefault = false;
+    },
+    reset() {
+      this.useDefault = true;
+      this.posX = 0;
+      this.posY = 0;
     },
   },
   data: () => ({
